@@ -1,0 +1,10 @@
+Shelled One,30,4,4,30,1
+Cephaloid,25,4,5,35,1
+Fiend,35,5,4,30,1
+Void Hunter,30,5,5,25,1
+Haunter,50,3,4,30,1
+Spirit,60,2,2,30,1
+Sentinel,40,3,3,40,1
+Chlorophid,35,4,3,40,1
+Cultist,30,4,4,20,1
+Exile,35,6,5,25,1

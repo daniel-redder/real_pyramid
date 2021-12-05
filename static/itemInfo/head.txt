@@ -1,0 +1,29 @@
+Baseball Cap
+Soldier Helmet
+Iron Helmet
+Brass Helmet
+Golden Helmet
+Steel Helmet
+Skull Cap
+Skull Helmet
+Bucket Hat
+Balaclava
+Welding Mask
+Hood
+Droopy-Hood
+Cowl
+Tricorne
+Top-Hat
+Turban
+Head-Cage
+Fedora
+Scarf
+Great Helm
+Hard Hat
+Cowboy Hat
+Party Hat
+Drama Mask
+Smiling Mask
+Angry Mask
+Wide-Brimmed Hat
+Skull Mask
