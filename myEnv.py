@@ -47,7 +47,7 @@ class pyramid:
 		
 		self.steps = 0
 		self.maxSteps = 4
-		
+		self.done = False
 
 		#Decisions
 		self.choose_team = None
@@ -57,10 +57,10 @@ class pyramid:
 
 
 		#Input to SPMN
-		self.teamStats = None
-		self.teamlosses = None
-		self.teamwins = None
-		self.playerStats = None
+		self.teamStats = [[None for y in range(10)] for x in range(4)]
+		self.teamlosses = [None for y in range(4)]
+		self.teamwins = [None for y in range(4)]
+		self.playerStats = [[None for y in range(10)] for x in range(4)]
 
 
 

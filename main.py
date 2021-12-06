@@ -11,7 +11,7 @@ df = pd.DataFrame(columns=["teamWins1","teamWins2","teamWins3","teamWins4","team
 env = pyramid()
 
 
-for x in range(30):
+for x in range(3):
 	test = True
 	while(test):
 		state, money, done = env.step(2)

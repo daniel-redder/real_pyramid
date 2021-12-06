@@ -37,7 +37,7 @@ public class player implements Serializable, Comparable<player> {
 		 */
 		this.team = team;
 		this.position = new int[2];
-		this.inventory = new item[4];
+		this.inventory = new item[5];
 		this.Alive = true;
 		this.floor = 0;
 		
