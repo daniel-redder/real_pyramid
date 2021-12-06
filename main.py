@@ -18,9 +18,9 @@ which_player chooses a player to decide whether to buy a item for, and to bet on
 buy_item Choose whether to buy a item for a player, and if so what type of item {-1: no item, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 """
 
+ticker = 0
 
-
-for x in range(10000):
+for x in range(256000000):
 	test = True
 
 	#choose_team
@@ -39,5 +39,6 @@ for x in range(10000):
 	env.reset()
 
 #print(df)
-
-df.to_csv("Output/pyramidOutput.csv")
+	if(x%30000==0):
+		df.to_csv(f'Output/pyramid{ticker}Output.csv')
+		df = df[0:0]
