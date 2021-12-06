@@ -62,7 +62,7 @@ class agentApplication {
 			}
 
 
-		  	utility.writeObject(mainRun,"Data/server.ser");
+		  	utility.writeObject(mainRun,"server");
 
 
 }

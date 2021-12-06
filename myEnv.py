@@ -33,6 +33,13 @@ y={0,1,2,3,4,5,6,7,8,9}
 This represents each stat for each player on the selected team. 
 '''
 
+#// values    [0] = self.choose_team,  [1]= self.team_or_player,  [2]=  self.which_player, [3]= self.buy_item
+"""
+choose_team picks which team the agent will choose to bet on  {0,1,2,3}
+team_or_player decides whether the agent will bet on the team or a player on the team {0:player,1:team}
+which_player chooses a player to decide whether to buy a item for, and to bet on should it choose to bet on a player {0,1,2,3}
+buy_item Choose whether to buy a item for a player, and if so what type of item {-1: no item, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+"""
 
 
 class pyramid:
@@ -104,6 +111,7 @@ class pyramid:
 		
 		self.fetch_from_serv()	
 
+
 		#returning the output of the action
 		return self.state(), self.money, self.done
 
@@ -125,9 +133,10 @@ class pyramid:
 			pobj = ft.read()
 		pobj = javaobj.loads(pobj)
 
-		"""with open("Data/server.ser","rb") as ft:
-			pobj = javaobj.load(ft)
-		"""
+		#v.2 Not functional utilizing v.1 instead
+		#with open("Data/server.ser","rb") as ft:
+		#	pobj = javaobj.load(ft)
+
 		#grabs data from the pyramid
 		if len(pobj.processingGames)>0:
 			pyramid = pobj.processingGames[0]
@@ -148,16 +157,16 @@ class pyramid:
 		
 		# Defines player stats if a team has been choosen
 		if   self.choose_team != None :
-			print(self.choose_team)
+			#print(self.choose_team)
 			players = [p for p in pyramid.players if p.team==pyramid.teams[self.choose_team]]
 			self.playerStats = []
 			for i in range(len(players)):
-				print(players[i].stats)
+				#print(players[i].stats)
 				self.playerStats.append(players[i].stats)
 			
 
 		#Builds teams wins and losses 
-		self.teamWins = [x.wins for x in pyramid.teams]
+		self.teamwins = [x.wins for x in pyramid.teams]
 		self.teamlosses = [x.losses for x in pyramid.teams]
 
 		#TODO modify to work with many agents (gets agents current money)
