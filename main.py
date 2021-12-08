@@ -20,7 +20,7 @@ buy_item Choose whether to buy a item for a player, and if so what type of item 
 
 ticker = 0
 
-for x in range(256000000):
+for x in range(1,1000):
 	test = True
 
 	#choose_team
@@ -39,6 +39,7 @@ for x in range(256000000):
 	env.reset()
 
 #print(df)
-	if(x%30000==0):
-		df.to_csv(f'Output/pyramid{ticker}Output.csv')
+	if(x%200==0):
+		df.to_csv(f'Output/pyramid2{ticker}RedderOutput.csv')
 		df = df[0:0]
+		ticker = ticker + 1
