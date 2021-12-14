@@ -21,5 +21,26 @@ Files will be put into the Output directory
 3) replace the metaData.py file with the one in this repo (found in spn/data/)
 4) run learnspmn.py
 
+**Testing Dataset** 
 
+read in the model *either one you trained from the previous step or ours (models/200dp.ser)* using pickle
+2) instantiate a environment object from myEnv.py
+3) run the following  (this will test the spmn against one simulation, and you can loop the while loop to continue it for however many iterations you wish we performed 600 on our model.  
+```python
+#env (the instantiated environment)
+#spmn (the read in environment)
 
+from spn.algorithms.MEU import best_next_decision
+
+state = env.reset()
+isDone = False
+states = []
+utilities = []
+while(!isDone):
+    state, utility, isDone = env.step( best_next_decision(spmn, state)
+    states.append(state)
+    utilities.append(utility)
+    
+print(states)
+print(utilities)
+```
