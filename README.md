@@ -28,7 +28,7 @@ read in the model *either one you trained from the previous step or ours (models
 3) run the following  (this will test the spmn against one simulation, and you can loop the while loop to continue it for however many iterations you wish we performed 600 on our model.  
 ```python
 #env (the instantiated environment)
-#spmn (the read in environment)
+#spmn (the read in model)
 
 from spn.algorithms.MEU import best_next_decision
 
