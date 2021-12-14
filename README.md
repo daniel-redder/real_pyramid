@@ -23,7 +23,7 @@ Files will be put into the Output directory
 
 **Testing Dataset** 
 
-read in the model *either one you trained from the previous step or ours (models/200dp.ser)* using pickle
+read in the model *either one you trained from the previous step or ours (models/200dp.pkle)* using pickle
 2) instantiate a environment object from myEnv.py
 3) run the following  (this will test the spmn against one simulation, and you can loop the while loop to continue it for however many iterations you wish we performed 600 on our model.  
 ```python
